@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor(
     private userService: UserService,
-  ) {}
+  ) { }
 
   /**
    * FELADAT!
@@ -27,5 +27,7 @@ export class AppComponent {
    * @returns {void}
    */
 
-
+  onDeleteUser(user: User): void {
+    this.userService.removeUser(user);
+  }
 }
